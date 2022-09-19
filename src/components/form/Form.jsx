@@ -12,7 +12,7 @@ const Form = ({input,setInput, todo, setTodo})=>{
     }
 
     return(
-        <form>
+        <form onSubmit={onFormSubmit}>
             <input 
             type="text" 
             placeholder="Enter an Item" 

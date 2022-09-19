@@ -1,6 +1,7 @@
 import React from "react";
 
 const ToDoList =({todo, setTodo})=>{
+   
     return(
         <div>
             {todo.map((todo)=>
@@ -10,15 +11,13 @@ const ToDoList =({todo, setTodo})=>{
                  className="list"
                  onChange={(event)=> event.preventDefault()}/>
             </li>)}
-            <button className="button-complete task-button">
-                <i className ="fa fa-check-circle"></i>
-            </button>
-            <button className="button-edit task-button">
-                <i className ="fa fa-edit"></i>
-            </button>
+            <div
+                onMouseOver={this.handleBoxToggle}
+                className={`container${this.state.showBox ? "show":""}`}>
             <button className="button-delete task-button">
-                <i className ="fa fa-delte"></i>
+                <i className ="fa fa-trash"></i>
             </button>
+            </div>
 
         </div>
     )

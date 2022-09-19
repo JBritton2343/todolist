@@ -2,7 +2,7 @@ import './App.css';
 import Header from "./components/header/Header";
 import Form from "./components/form/Form";
 import React, {useState} from "react";
-import ToDo_List from './components/todo_list/ToDoList';
+import ToDoList from './components/todo_list/ToDoList';
 
 function App() {
   const[input, setInput]= useState("");
@@ -23,7 +23,7 @@ function App() {
             />
           </div>
           <div>
-            <ToDo_List/>
+            <ToDoList todo={todo} setTodo={setTodo}/>
           </div>
         </div>
 
