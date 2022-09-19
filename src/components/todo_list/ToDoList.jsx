@@ -1,6 +1,10 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 const ToDoList =({todo, setTodo})=>{
+   const handleDelete=({id})=>{
+     setTodo(todo.filter((todo)=>todo.id !== id));
+   }
+   const [isShown, setIsShown]=useState(false);
    
     return(
         <div>
@@ -10,14 +14,17 @@ const ToDoList =({todo, setTodo})=>{
                  value={todo.title} 
                  className="list"
                  onChange={(event)=> event.preventDefault()}/>
+                 <button className="button-delete task-button" 
+                 onClick={()=>handleDelete(todo)}
+                 onMouseOver={()=>setIsShown(true)}
+                 onMouseLeave={()=>setIsShown(false)}
+                 >
+                <i className ="fa fa-trash" ></i>
+                </button>
             </li>)}
-            <div
-                onMouseOver={this.handleBoxToggle}
-                className={`container${this.state.showBox ? "show":""}`}>
-            <button className="button-delete task-button">
-                <i className ="fa fa-trash"></i>
-            </button>
-            </div>
+            
+            
+            
 
         </div>
     )
