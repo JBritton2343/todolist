@@ -1,12 +1,13 @@
 import React from "react";
 
-const ToDo_List =({todo, setTodo})=>{
+const ToDoList =({todo, setTodo})=>{
     return(
         <div>
             {todo.map((todo)=>
-            <li className="list-item" key={todo-list}>
+            <li className="todo-list" key={todo.id}>
                 <input type="text"
                  value={todo.title} 
+                 className="list"
                  onChange={(event)=> event.preventDefault()}/>
             </li>)}
             <button className="button-complete task-button">
@@ -22,4 +23,4 @@ const ToDo_List =({todo, setTodo})=>{
         </div>
     )
 }
-export default ToDo_List;
+export default ToDoList;
