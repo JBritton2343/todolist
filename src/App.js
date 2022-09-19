@@ -23,7 +23,7 @@ function App() {
             />
           </div>
           <div>
-          {todo.length == 0 ? "List is empty" : <ToDoList todo={todo} setTodo={setTodo}/>}
+          {todo.length === 0 ? "List is empty" : <ToDoList todo={todo} setTodo={setTodo}/>}
           </div>
         </div>
 
