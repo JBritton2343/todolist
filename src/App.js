@@ -6,7 +6,7 @@ import ToDoList from './components/todo_list/ToDoList';
 
 function App() {
   const[input, setInput]= useState("");
-  const[todo, setTodo, isEmpty]=useState([]);
+  const[todo, setTodo]=useState([]);
   return (
     <div className="container">
       <div className="app-wrapper">
