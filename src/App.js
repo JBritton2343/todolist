@@ -6,7 +6,7 @@ import ToDoList from './components/todo_list/ToDoList';
 
 function App() {
   const[input, setInput]= useState("");
-  const[todo, setTodo]=useState([]);
+  const[todo, setTodo, isEmpty]=useState([]);
   return (
     <div className="container">
       <div className="app-wrapper">
@@ -23,7 +23,7 @@ function App() {
             />
           </div>
           <div>
-            <ToDoList todo={todo} setTodo={setTodo}/>
+          {todo.length == 0 ? "List is empty" : <ToDoList todo={todo} setTodo={setTodo}/>}
           </div>
         </div>
 
