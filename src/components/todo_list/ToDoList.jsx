@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 
 const ToDoList =({todo, setTodo})=>{
    const handleDelete=({id})=>{
@@ -16,11 +16,12 @@ const ToDoList =({todo, setTodo})=>{
                  onChange={(event)=> event.preventDefault()}/>
                  <button className="button-delete task-button" 
                  onClick={()=>handleDelete(todo)}
-                 onMouseOver={()=>setIsShown(true)}
+                 onMouseEnter={()=>setIsShown(true)}
                  onMouseLeave={()=>setIsShown(false)}
-                 >
-                <i className ="fa fa-trash" ></i>
+                 >{isShown &&(
+                    <i className ="fa fa-trash" ></i>)}
                 </button>
+                
             </li>)}
             
             
